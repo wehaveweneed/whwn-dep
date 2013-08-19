@@ -1,0 +1,13 @@
+Documentation for the project is written in reStructuredText__, a plain-text
+markup language, and compiled into HTML with Sphinx__. 
+
+__ http://docutils.sourceforge.net/rst.html
+__ http://sphinx.pocoo.org
+
+Documentation can be read in three ways:
+
+#. In plain-text form, i.e. by looking at ``.rst`` files
+#. Through local HTML documentation: run ``make html`` from the ``docs`` folder.
+#. Online at ReadTheDocs.org__
+
+__ http://wehave-weneed.readthedocs.org
