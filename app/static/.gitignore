@@ -1,0 +1,4 @@
+coffee/backbone/components/*/*
+!coffee/backbone/components/*/*.js
+js/backbone/components/*/*
+!js/backbone/components/*/*.js

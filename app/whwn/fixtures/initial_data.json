@@ -1,0 +1,23 @@
+[
+  {
+    "pk": 1,
+    "model": "whwn.itemcategory",
+    "fields": {
+      "name": "Medicine"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "whwn.itemcategory",
+    "fields": {
+      "name": "Other Supplies"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "whwn.itemcategory",
+    "fields": {
+      "name": "Tools"
+    }
+  }
+]

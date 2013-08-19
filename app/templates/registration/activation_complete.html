@@ -1,0 +1,70 @@
+{% extends "_base.html" %}
+
+{% block content %}
+    <div id="activation-complete-content">
+        <div id="column-1">
+            {% include "_page_title.html" with title="registration complete!" %}
+
+            <h2 class="bold">Welcome!</h2>
+            <p class="description">
+              We're excited to have you with us on We Have We Need! We understand
+              that in order for We Have We Need to best service you, we're going
+              to need your input on the direction we take in developing this
+              service. If you ever get a chance, please submit some feedback.
+            </p>
+
+            <p class="description">
+                We're going to need a location to use as your default location.
+                Please specify it in the form on the right. You can click on the
+                map to get the latitude and longitude coordinates!
+            </p>
+        </div>
+        <div id="column-2">
+			<div id="location-form-container">
+				<form method="POST">
+					{% include "_map.html" with name="sdmap" width="435" height="255" %} 
+					<script>
+                      require(["_map"],function(){
+                        mapper = Mapper.get();
+                        map = mapper.getMapElementById("sdmap");
+                        map.on("click", onMapClick);
+                        function onMarkerDrag(e) {
+                          latitude = e.target.getLatLng().lat;
+                          longitude = e.target.getLatLng().lng;
+                          
+                          $('#id_longitude').val(longitude.toFixed(5));
+                          $('#id_latitude').val(latitude.toFixed(5));
+                        }
+						function onMapClick(e) {
+                          latitude = e.latlng.lat;
+                          longitude = e.latlng.lng;
+                          if (map.marker === undefined || map.marker == null) {
+                            map.marker = L.marker([latitude, longitude], { draggable: true }).addTo(map);
+                            map.marker.on("drag", onMarkerDrag);
+                          } else {
+                            map.marker.setLatLng([latitude, longitude]);
+                            map.marker.update();
+                          }
+
+                          $('#id_longitude').val(e.latlng.lng.toFixed(5));
+                          $('#id_latitude').val(e.latlng.lat.toFixed(5));
+						}
+                      });
+					</script>
+					{% csrf_token %}
+                    {{ form.non_field_errors }}
+					{% for field in form %}
+						<div id="form_field">
+                            {{ field.label_tag }}
+							{{ field }}	
+                            {{ field.errors }}
+							<span class="help-inline"></span>
+						</div>
+					{% endfor %}
+
+					<input type="submit"/>
+				</form>
+			</div>
+        </div>
+    </div>
+{% endblock %}

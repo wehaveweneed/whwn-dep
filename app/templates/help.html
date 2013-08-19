@@ -1,0 +1,65 @@
+{% extends "_base.html" %}
+
+{% block content %}
+    <div id="help-content">
+        <div id="column-1">
+            {% include "_page_title.html" with title="Help Center" %}
+			<h2>Yikes!</h2>
+			<p>It looks like you have some questions. Well, you came to the right place.
+			Chances are you aren't alone either, take a look at our <a href=#faq>FAQ</a> to see if your question has been asked before.
+			If you want to talk to a human, check out the following options.</p>
+
+			<h3>Tech. Support Chat Room:</h3>
+			<p>Click <a href="http://www.hipchat.com/gnTbwuYut">here</a> to join our technical support chatroom. At least one of our many talented engineers is usually in here and would be happy to help you.</p>
+			<p><strong>If nobody is in the chat room, tweet @wehaveweneed or @WesVetter and we'll get in there.</strong></p>
+
+			<h3>Email:</h3>
+			<p>If you'd prefer to send us an email, you can reach us at support@wehave-weneed.org.</p>
+
+			<h2><a id=faq>Frequently Asked Questions</a></h2>
+
+			<h3>Technical questions:</h3>
+			<p><strong>How do I search for something I need?</strong></p>
+			<p>Click on postings at the top menu bar. Enter an item name and click enter. Items found are  automatically sorted by distance based on your default location</p>
+			<p><strong>How do I change my default location?</strong></p>
+			<p>Click on "settings" at the top right menu bar. Towards the bottom of the screen you'll find an area for location settings. You can either add a new location, or change your existing ones. Keep in mind that only your default one will be used when doing a search.</p>
+			<p><strong>How do I share/ request an item?</strong></p>
+			<p>Click on "create post" at the top menu bar. Here you can specify if you "have" or "need" the item. Then enter the appropriate item name and give it a description. Make sure to describe any special conditions that you might have for this item.</p>
+			<p><strong>What are hash tags?</strong></p>
+			<p>Each transaction is given a hashtag that starts with "#", like "#1234". This allows you to communicate with the other party by using your email or SMS. Simply send messages@mail.wehave-weneed.org an email with your hashtag and message and we'll make sure it gets to the other person. </p>
+
+			<h3>Getting Started:</h3>
+			<p><strong>Location settings</strong></p>
+			<p>Before you can create a post, you need to set up your location settings. It doesn't have to be your exact location, but we incorporate your location into your search relevances so try to make it accurate.</p>
+			<p><strong>Messages</strong></p>
+			<p>To view your messages, click on 'Messages' near the top left-hand corner. The Message Center helps you organize and view a collection of messages sent from other users. Messages are grouped according to which transaction they are associated with. Utilize the search feature at the top of the page to find messages according to the sender, post title, or message contents.</p>
+			<p><strong>Inventory</strong></p>
+			<p>The inventory is a pair of comprehensive lists of things you have, on the left, and things you need, on the right. You can look through the lists to see the items you have added as haves or as needs.
+			Note: The postings for this items can be edited or deleted by clicking on them, and then clicking on Edit Post, or Delete Post
+			You can view the communications for the item by clicking View Communications</p>
+			<p><strong>Postings</strong></p>
+			<p>Click on Postings to view a collection of posts by other users. The post will include a description of the item that they have or need. If you see something you need or can spare, click the item to get more details and get in touch with the owner.</p>
+			<p><strong>Create Posts</strong></p>
+			<p>Click on Create Post to create and send a post to other users in your area about an item you need or have.
+			To submit a new post:
+			Fill out the form with the accurate information regarding the item and hit submit.
+			Finished. Now just wait!</p>
+
+			<h3>General questions:</h3>
+			<p><strong>What is We Have, We Need (WHWN)?</strong></p>
+			<p>WHWN is an inventory sharing system where users are able to share what they have as well as request things they need. Our mission is to help humanitarians share essential tools and medicine. We provide a platform for communication, connecting haves to needs.</p>
+			<p><strong>Do I need anything special to use it?</strong></p>
+			<p>Nope, all you have to do is sign up. You can even use the site with SMS (text messaging), no smart phone or app required!</p>
+			<p><strong>What does WHWN do?</strong></p>
+			<p>We simply provide the means for you to get in touch with other do-gooders. Users are able to create postings, search for nearby supplies, and use our communication tools for to communicate safely with other users. </p>
+			<p><strong>What does WHWN NOT do?</strong></p>
+			<p>We only handle the postings and communication, we take no part in the physical exchange of supplies. We cannot guarantee that all transactions will be successful. You are ultimately responsible for deciding how best to interact with other users. Check out our Best Practices guide for advice on staying safe.</p>
+			<p><strong>How can I support We Have, We Need?</strong></p>
+			<p>By using our service to share and receive items you are already supporting us. We're also looking for sponsorship but if you can't contribute financially make sure to tell your friends about us! If you have any recommendations on how we can improve, feel free to send us an email.</p>
+			<p><strong>What technology are we built on?</strong></p>
+			<p>Our front-end is built on python and django. On the backend we use Postgres and Postgis for geospatial indexing. </p>
+
+        </div>
+    </div>
+
+{% endblock %}

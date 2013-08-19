@@ -1,0 +1,43 @@
+table.backgrid
+  border: 1px solid #ddd
+  margin-bottom: 0
+  counter-reset: row
+
+  & thead th
+    background: #e6f1f6
+
+  & td.backgrid-selected
+    outline: 1px solid rgba(82, 168, 236, 0.8)
+    outline-offset: -1px
+
+  & td.select-row-cell
+    background-color: #e6f1f6
+
+  & tr.backgrid-row-selected
+    background-color: #fffeea !important
+    font-weight: bold !important
+
+    & td
+      background-color: #fffeea !important
+      font-weight: bold !important
+
+    & th, & td.select-row-cell
+      background-color: #a2c5d3 !important
+      font-weight: bold !important
+
+
+
+
+table.backgrid td.select-row-cell
+  text-align: center !important
+  vertical-align: text-top
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+td.select-row-cell:before
+  counter-increment: row
+  content: counter(row)

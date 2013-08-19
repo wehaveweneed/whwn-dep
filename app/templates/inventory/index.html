@@ -1,0 +1,23 @@
+{% extends "_base.html" %}
+
+{% block title %}Inventory for {{user}}{% endblock %}
+
+{% load require %}
+{% block after_dom %}
+    <script src='https://cdn.firebase.com/v0/firebase.js'></script>
+    <script type="text/javascript">
+        require.config["views/inventory/index"] = {
+            categories: JSON.parse({{ categories|safe }}),
+        }
+    </script>
+    {% require_module 'main' %}
+{% endblock after_dom %}
+
+{% block content %}
+<div id="inventory-page-container">
+    <div id="inventory-app-container">
+    </div>
+    <div id="inventory-chat-container">
+    </div>
+</div>
+{% endblock content%}

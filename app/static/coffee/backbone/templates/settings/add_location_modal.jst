@@ -1,0 +1,24 @@
+<div id="add-location-modal-contents">
+    <a class="modalCloseImg simplemodal-close" title="Close"></a>
+    <div id="add-map" style="width: 640px; height: 350px"></div>
+    <div class="column-1">
+      <form id="add-location-form">
+          <label for="name">Location name: </label>
+          <input type="text" name="name" />
+          <label for="latitude">Latitude: </label>
+          <input type="text" name="latitude" />
+          <label for="longitude">Longitude: </label>
+          <input type="text" name="longitude" />
+          <input type="submit" value="Add Location" />
+      </form>
+    </div>
+    <div class="column-2">
+        <form id="geocode-location-form">
+            <label for="query">Location search: </label>
+            <input type="text" name="gq" placeholder="eg. Manhattan, Statue of Liberty" />
+            <input type="submit" class="inline" value="Search" />
+        </form>
+        <ul class="geocode-search-results">
+        </ul>
+    </div>
+</div>

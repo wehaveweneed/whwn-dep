@@ -1,0 +1,562 @@
+/* line 17, /opt/vagrant_ruby/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, /opt/vagrant_ruby/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, /opt/vagrant_ruby/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, /opt/vagrant_ruby/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, /opt/vagrant_ruby/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, /opt/vagrant_ruby/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, /opt/vagrant_ruby/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, /opt/vagrant_ruby/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, /opt/vagrant_ruby/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 4, /opt/vagrant_ruby/lib/ruby/gems/1.8/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
+body {
+  font: 13px/1.5 Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
+}
+
+/* line 6, /opt/vagrant_ruby/lib/ruby/gems/1.8/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
+a:focus {
+  outline: 1px dotted invert;
+}
+
+/* line 8, /opt/vagrant_ruby/lib/ruby/gems/1.8/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
+hr {
+  border-color: #cccccc;
+  border-style: solid;
+  border-width: 1px 0 0;
+  clear: both;
+  height: 0;
+}
+
+/* line 14, /opt/vagrant_ruby/lib/ruby/gems/1.8/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
+h1 {
+  font-size: 25px;
+}
+
+/* line 16, /opt/vagrant_ruby/lib/ruby/gems/1.8/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
+h2 {
+  font-size: 23px;
+}
+
+/* line 18, /opt/vagrant_ruby/lib/ruby/gems/1.8/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
+h3 {
+  font-size: 21px;
+}
+
+/* line 20, /opt/vagrant_ruby/lib/ruby/gems/1.8/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
+h4 {
+  font-size: 19px;
+}
+
+/* line 22, /opt/vagrant_ruby/lib/ruby/gems/1.8/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
+h5 {
+  font-size: 17px;
+}
+
+/* line 24, /opt/vagrant_ruby/lib/ruby/gems/1.8/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
+h6 {
+  font-size: 15px;
+}
+
+/* line 26, /opt/vagrant_ruby/lib/ruby/gems/1.8/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
+ol {
+  list-style: decimal;
+}
+
+/* line 28, /opt/vagrant_ruby/lib/ruby/gems/1.8/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
+ul {
+  list-style: square;
+}
+
+/* line 30, /opt/vagrant_ruby/lib/ruby/gems/1.8/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
+li {
+  margin-left: 30px;
+}
+
+/* line 32, /opt/vagrant_ruby/lib/ruby/gems/1.8/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
+p,
+dl,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+pre,
+table,
+address,
+fieldset {
+  margin-bottom: 20px;
+}
+
+/* line 1, /home/vagrant/whwn/app/tools/static/sass/matchqc/_search_panel.sass */
+.admin-panel {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 500;
+}
+/* line 4, /home/vagrant/whwn/app/tools/static/sass/matchqc/_search_panel.sass */
+.admin-panel .rounded-one, .admin-panel .rounded-one-selected, .admin-panel .rounded-one-small, .admin-panel .rounded-one-small-selected {
+  width: 100px;
+  height: 100px;
+  background: #fcfff4;
+  background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: -o-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: -ms-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 );
+  margin: 20px auto;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  position: relative;
+  margin-top: 138px;
+}
+/* line 23, /home/vagrant/whwn/app/tools/static/sass/matchqc/_search_panel.sass */
+.admin-panel .rounded-one label, .admin-panel .rounded-one-selected label, .admin-panel .rounded-one-small label, .admin-panel .rounded-one-small-selected label {
+  cursor: pointer;
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  left: 5px;
+  top: 5px;
+  -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+  -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+  background: -webkit-linear-gradient(top, #222222 0%, #45484d 100%);
+  background: -moz-linear-gradient(top, #222222 0%, #45484d 100%);
+  background: -o-linear-gradient(top, #222222 0%, #45484d 100%);
+  background: -ms-linear-gradient(top, #222222 0%, #45484d 100%);
+  background: linear-gradient(top, #222222 0%, #45484d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#222', endColorstr='#45484d',GradientType=0 );
+}
+/* line 42, /home/vagrant/whwn/app/tools/static/sass/matchqc/_search_panel.sass */
+.admin-panel .rounded-one label:after, .admin-panel .rounded-one-selected label:after, .admin-panel .rounded-one-small label:after, .admin-panel .rounded-one-small-selected label:after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  content: "";
+  position: absolute;
+  width: 84px;
+  height: 84px;
+  background: #00bf00;
+  background: -webkit-linear-gradient(top, #00bf00 0%, #009400 100%);
+  background: -moz-linear-gradient(top, #00bf00 0%, #009400 100%);
+  background: -o-linear-gradient(top, #00bf00 0%, #009400 100%);
+  background: -ms-linear-gradient(top, #00bf00 0%, #009400 100%);
+  background: linear-gradient(top, #00bf00 0%, #009400 100%);
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  top: 3px;
+  left: 3px;
+  -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+/* line 64, /home/vagrant/whwn/app/tools/static/sass/matchqc/_search_panel.sass */
+.admin-panel .rounded-one label:hover::after, .admin-panel .rounded-one-selected label:hover::after, .admin-panel .rounded-one-small label:hover::after, .admin-panel .rounded-one-small-selected label:hover::after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+  filter: alpha(opacity=30);
+  opacity: 0.3;
+}
+/* line 70, /home/vagrant/whwn/app/tools/static/sass/matchqc/_search_panel.sass */
+.admin-panel .rounded-one-selected label:after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 1;
+  content: "";
+  position: absolute;
+  width: 84px;
+  height: 84px;
+  background: #00bf00;
+  background: -webkit-linear-gradient(top, #00bf00 0%, #009400 100%);
+  background: -moz-linear-gradient(top, #00bf00 0%, #009400 100%);
+  background: -o-linear-gradient(top, #00bf00 0%, #009400 100%);
+  background: -ms-linear-gradient(top, #00bf00 0%, #009400 100%);
+  background: linear-gradient(top, #00bf00 0%, #009400 100%);
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  top: 3px;
+  left: 3px;
+  -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+/* line 92, /home/vagrant/whwn/app/tools/static/sass/matchqc/_search_panel.sass */
+.admin-panel .rounded-one-small, .admin-panel .rounded-one-small-selected {
+  height: 28px;
+  width: 28px;
+  margin-top: 15px;
+  float: left;
+  margin-top: 61px;
+  margin-left: 10px;
+}
+/* line 100, /home/vagrant/whwn/app/tools/static/sass/matchqc/_search_panel.sass */
+.admin-panel .rounded-one-small label, .admin-panel .rounded-one-small-selected label {
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  top: 4px;
+}
+/* line 105, /home/vagrant/whwn/app/tools/static/sass/matchqc/_search_panel.sass */
+.admin-panel .rounded-one-small label:after, .admin-panel .rounded-one-small-selected label:after {
+  width: 16px;
+  height: 16px;
+  top: 2px;
+  left: 2px;
+}
+/* line 112, /home/vagrant/whwn/app/tools/static/sass/matchqc/_search_panel.sass */
+.admin-panel .rounded-one-small-selected label:after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 1;
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #00bf00;
+  background: -webkit-linear-gradient(top, #00bf00 0%, #009400 100%);
+  background: -moz-linear-gradient(top, #00bf00 0%, #009400 100%);
+  background: -o-linear-gradient(top, #00bf00 0%, #009400 100%);
+  background: -ms-linear-gradient(top, #00bf00 0%, #009400 100%);
+  background: linear-gradient(top, #00bf00 0%, #009400 100%);
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  top: 2px;
+  left: 2px;
+  -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+/* line 134, /home/vagrant/whwn/app/tools/static/sass/matchqc/_search_panel.sass */
+.admin-panel .centered-button {
+  position: relative;
+  left: 50%;
+  margin-left: -118px;
+  margin-bottom: 50px;
+}
+/* line 139, /home/vagrant/whwn/app/tools/static/sass/matchqc/_search_panel.sass */
+.admin-panel .title-bar {
+  height: 35px;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+/* line 144, /home/vagrant/whwn/app/tools/static/sass/matchqc/_search_panel.sass */
+.admin-panel .margin-center {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+/* line 148, /home/vagrant/whwn/app/tools/static/sass/matchqc/_search_panel.sass */
+.admin-panel .start-button {
+  -moz-box-shadow: inset 0px 0px 0px 0px #4e9500;
+  -webkit-box-shadow: inset 0px 0px 0px 0px #4e9500;
+  box-shadow: inset 0px 0px 0px 0px #4e9500;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5fb600), color-stop(1, #4e9500));
+  background: -moz-linear-gradient(center top, #5fb600 5%, #4e9500 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgb(95,182,0)', endColorstr='rgb(78,149,0)');
+  background-color: #ededed;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  border: 1px solid gainsboro;
+  display: inline-block;
+  color: white;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 65px;
+  font-weight: 600;
+  padding: 12px 30px;
+  text-decoration: none;
+  text-shadow: 1px 1px 0px white;
+  letter-spacing: 5px;
+}
+/* line 169, /home/vagrant/whwn/app/tools/static/sass/matchqc/_search_panel.sass */
+.admin-panel .start-button:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #4e9500), color-stop(1, #5fb600));
+  background: -moz-linear-gradient(center top, #4e9500 5%, #5fb600 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgb(78,149,0)', endColorstr='rgb(95,182,0)');
+  background-color: #dfdfdf;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+/* line 175, /home/vagrant/whwn/app/tools/static/sass/matchqc/_search_panel.sass */
+.admin-panel .start-button:active {
+  position: relative;
+  top: 1px;
+}
+/* line 178, /home/vagrant/whwn/app/tools/static/sass/matchqc/_search_panel.sass */
+.admin-panel .snippet {
+  background-color: seashell;
+  color: black;
+  width: 60%;
+  height: 150px;
+  border: solid 1px #888888;
+  font-size: 15px;
+  padding: 5px;
+}
+/* line 186, /home/vagrant/whwn/app/tools/static/sass/matchqc/_search_panel.sass */
+.admin-panel .item-query {
+  margin-top: 20px;
+  margin-left: 300px;
+  border: solid;
+  border-width: 2px;
+  width: 1057px;
+  overflow: scroll;
+  height: 600px;
+}
+/* line 194, /home/vagrant/whwn/app/tools/static/sass/matchqc/_search_panel.sass */
+.admin-panel .item-query-right, .admin-panel .item-query-left {
+  float: left;
+  width: 48%;
+  min-height: 10px;
+  padding-left: 1%;
+  overflow: scroll;
+  height: 600px;
+}
+/* line 201, /home/vagrant/whwn/app/tools/static/sass/matchqc/_search_panel.sass */
+.admin-panel .item {
+  position: static;
+}
+/* line 203, /home/vagrant/whwn/app/tools/static/sass/matchqc/_search_panel.sass */
+.admin-panel .item-title {
+  font-weight: bold;
+  font-size: 2em;
+  display: inline;
+}
+/* line 207, /home/vagrant/whwn/app/tools/static/sass/matchqc/_search_panel.sass */
+.admin-panel .item-amount {
+  display: inline;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+/* line 211, /home/vagrant/whwn/app/tools/static/sass/matchqc/_search_panel.sass */
+.admin-panel li {
+  margin-left: 38px;
+  list-style-type: none;
+  font-weight: bold;
+  font-size: 1em;
+  margin-top: 5px;
+}
+/* line 217, /home/vagrant/whwn/app/tools/static/sass/matchqc/_search_panel.sass */
+.admin-panel .list-desc {
+  font-size: 1em;
+  display: inline-block;
+  font-weight: normal;
+}
+/* line 221, /home/vagrant/whwn/app/tools/static/sass/matchqc/_search_panel.sass */
+.admin-panel .smaller-title {
+  margin-left: -25px;
+  display: inline;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-decoration: underline;
+}
+/* line 227, /home/vagrant/whwn/app/tools/static/sass/matchqc/_search_panel.sass */
+.admin-panel .item-recc {
+  margin-top: 10px;
+  padding-left: 10px;
+  background-color: #bec1d0;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border-radius: 15px;
+  margin-bottom: 5px;
+}
+
+/* line 1, /home/vagrant/whwn/app/tools/static/sass/matchqc/_index.sass */
+.admin-panel {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+/* line 4, /home/vagrant/whwn/app/tools/static/sass/matchqc/_index.sass */
+.admin-panel .centered-button {
+  position: relative;
+  left: 50%;
+  margin-left: -118px;
+  margin-bottom: 50px;
+}
+/* line 9, /home/vagrant/whwn/app/tools/static/sass/matchqc/_index.sass */
+.admin-panel .title-bar {
+  height: 35px;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+/* line 14, /home/vagrant/whwn/app/tools/static/sass/matchqc/_index.sass */
+.admin-panel .margin-center {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+/* line 18, /home/vagrant/whwn/app/tools/static/sass/matchqc/_index.sass */
+.admin-panel .start-button {
+  -moz-box-shadow: inset 0px 0px 0px 0px #4e9500;
+  -webkit-box-shadow: inset 0px 0px 0px 0px #4e9500;
+  box-shadow: inset 0px 0px 0px 0px #4e9500;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5fb600), color-stop(1, #4e9500));
+  background: -moz-linear-gradient(center top, #5fb600 5%, #4e9500 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgb(95,182,0)', endColorstr='rgb(78,149,0)');
+  background-color: #ededed;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  border: 1px solid gainsboro;
+  display: inline-block;
+  color: white;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 65px;
+  font-weight: 600;
+  padding: 12px 30px;
+  text-decoration: none;
+  text-shadow: 1px 1px 0px white;
+  letter-spacing: 5px;
+}
+/* line 39, /home/vagrant/whwn/app/tools/static/sass/matchqc/_index.sass */
+.admin-panel .start-button:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #4e9500), color-stop(1, #5fb600));
+  background: -moz-linear-gradient(center top, #4e9500 5%, #5fb600 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgb(78,149,0)', endColorstr='rgb(95,182,0)');
+  background-color: #dfdfdf;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+/* line 45, /home/vagrant/whwn/app/tools/static/sass/matchqc/_index.sass */
+.admin-panel .start-button:active {
+  position: relative;
+  top: 1px;
+}
+/* line 48, /home/vagrant/whwn/app/tools/static/sass/matchqc/_index.sass */
+.admin-panel .snippet {
+  background-color: seashell;
+  color: black;
+  width: 60%;
+  height: 150px;
+  border: solid 1px #888888;
+  font-size: 15px;
+  padding: 5px;
+}
+/* line 56, /home/vagrant/whwn/app/tools/static/sass/matchqc/_index.sass */
+.admin-panel .item-query {
+  margin-top: 20px;
+  margin-left: 300px;
+  border: solid;
+  border-width: 2px;
+  width: 1057px;
+  overflow: scroll;
+  height: 600px;
+}
+/* line 64, /home/vagrant/whwn/app/tools/static/sass/matchqc/_index.sass */
+.admin-panel .item-query-right, .admin-panel .item-query-left {
+  float: left;
+  width: 48%;
+  min-height: 10px;
+  padding-left: 1%;
+}
+/* line 69, /home/vagrant/whwn/app/tools/static/sass/matchqc/_index.sass */
+.admin-panel .item {
+  position: static;
+}
+/* line 71, /home/vagrant/whwn/app/tools/static/sass/matchqc/_index.sass */
+.admin-panel .item-title {
+  font-weight: bold;
+  font-size: 2em;
+  display: inline;
+}
+/* line 75, /home/vagrant/whwn/app/tools/static/sass/matchqc/_index.sass */
+.admin-panel .item-amount {
+  display: inline;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+/* line 79, /home/vagrant/whwn/app/tools/static/sass/matchqc/_index.sass */
+.admin-panel li {
+  list-style-type: none;
+  font-weight: bold;
+  font-size: 1em;
+}
+/* line 83, /home/vagrant/whwn/app/tools/static/sass/matchqc/_index.sass */
+.admin-panel .list-desc {
+  font-size: 1em;
+  display: inline-block;
+  font-weight: normal;
+}
+/* line 87, /home/vagrant/whwn/app/tools/static/sass/matchqc/_index.sass */
+.admin-panel .smaller-title {
+  display: inline;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-decoration: underline;
+}
+/* line 92, /home/vagrant/whwn/app/tools/static/sass/matchqc/_index.sass */
+.admin-panel .item-recc {
+  margin-top: 10px;
+  background-color: #bec1d0;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border-radius: 15px;
+  margin-bottom: 5px;
+}

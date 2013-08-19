@@ -1,0 +1,8 @@
+{% extends '_base.html' %}
+{% block content  %}
+<div id="about-content">
+	{% for member in team %}
+	<li>{{member.name}}</li>
+{% endfor %}
+</div>
+{% endblock %}

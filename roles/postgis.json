@@ -1,0 +1,21 @@
+{
+  "name": "postgis",
+  "default_attributes": {},
+  "override_attributes": {
+    "postgresql": {
+      "version": "9.1",
+      "pg_hba_defaults": false,
+      "pg_hba": [
+        {"type": "local", "db" => "all", "user" => "postgres", "addr": "", "method": "trust"},
+        {"type": "local", "db" => "all", "user" => "all", "addr": "", "method": "trust"},
+        {"type": "host",  "db" => "all", "user" => "all", "addr": "127.0.0.1/32", "method": "trust"},
+        {"type": "host",  "db" => "all", "user" => "all", "addr": "::1/128", "method": "trust"}
+      ]
+    }
+  },
+  "json_class": "Chef::Role",
+  "description": "Postgis Role",
+  "run_list": ["whwn::postgis"]
+}
+     
+

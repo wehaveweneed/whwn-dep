@@ -1,0 +1,27 @@
+{% extends "_base.html" %}
+
+{% block content %}
+    <div id="index-content">
+        <div id="column-1">
+            {% include "_page_title.html" with title="registration complete!" %}
+
+            <!-- FIXME: This style should not be inline -->
+            <h3 style="color:red; font-weight: bold">Check your email!</h3>
+            <p style="font-size: 1.1em; font-weight: bold">
+                We just sent you an email that contains details on how to activate
+                your We Have We Need account.
+            </p>
+
+            <p>
+                Why do we do this?
+                <ol>
+                    <li>We want to confirm that you are not a robot.</li>
+                    <li>Some important We Have We Need services rely on the fact
+                        that your email is correct!</li>
+                </ol>
+            </p>
+        </div>
+        <div id="column-2">
+        </div>
+    </div>
+{% endblock %}

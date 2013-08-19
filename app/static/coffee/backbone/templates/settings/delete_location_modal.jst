@@ -1,0 +1,18 @@
+<div id="delete-location-modal-contents">
+    <a class="modalCloseImg simplemodal-close" title="Close"></a>
+    <form class="delete-location-form" data-id="<%= id %>">
+    
+        <p>
+        <b>Are you sure you want to delete this location?</b>
+        </p>
+        <p>Name:
+        <b><%= name %></b></p>
+        <p>Longitude:
+        <b><%= longitude %></b></p>
+        <p>Latitude:
+        <b><%= latitude %></b></p>
+
+        <input type="submit" name="submit" value="Confirm Delete" />
+        <a href="#" name="cancel">Cancel</a>
+    </form>
+</div>

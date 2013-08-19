@@ -1,0 +1,20 @@
+<div id="{{ name }}" style="width:{{width}}px; height:{{height}}px"></div>
+	
+<script type="text/javascript">
+    var map,mapper;
+    define("_map",["mapper"],function(){
+      mapper = Mapper.get();
+
+      if ("{{name}}" == "nymap") {
+        map = mapper.createMap('nymap', "nymap", 40.716018, -74.006856, 11);
+      } else if ("{{name}}" == "sdmap") {
+        map = mapper.createMap('sdmap', "sdmap", 32.90239, -117.20302, 10);
+      } else {
+        map = mapper.createMap('{{name}}', "map", 18.550567, -72.336833, 13);
+      }
+
+      mapper.addLayerToMap("default", map);
+      maxPopupWidth = {{width}} / 4;
+      var popup = L.popup({maxWidth: maxPopupWidth});
+    });
+</script>

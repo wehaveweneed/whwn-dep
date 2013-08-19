@@ -1,0 +1,101 @@
+#settings-content
+  #settings-main-container
+    +grid(16)
+    +alpha
+    +omega
+    padding-top: 40px
+    padding-bottom: 40px
+    overflow: visible
+    h3
+      border-bottom: 1px solid #222
+    h4
+      font-style: italic
+    table
+      width: 100%
+      font-size: 1.1em
+      tr
+        td
+          padding: 5px 0
+          &.label
+            font-weight: bold
+            width: 40%
+          &.current-value
+            font-style: italic
+            width: 30%
+          &.edit
+            width: 30%
+            text-align: center
+    #default-location-container
+      overflow: hidden
+    #other-locations-container
+      overflow: hidden
+    .location-tile
+      margin-bottom: 10px
+      margin-right: 10px
+      background: #DEDEDE
+      display: block
+      padding: 10px
+      float: left
+      .location-map
+        width: 270px
+        height: 270px
+        padding: 0
+        margin: 0
+        border: 3px solid black
+      table
+        tr
+          td
+            padding-left: 10px
+        margin: 0
+      table.location-details
+        margin-top: 10px
+        tr
+          td.label
+            width: 30%
+          td.current-value
+            width: 70%
+      .location-tile-links
+        overflow: hidden
+        table
+          width: 100%
+          tr td
+            text-align: center
+
+#edit-location-modal-contents, #add-location-modal-contents
+  overflow: visible
+  .leaflet-container
+    border: 3px solid black
+  .column-1
+    margin-top: 20px
+    float: left
+    display: inline-block
+  .column-2
+    margin-top: 20px
+    margin-left: 30px
+    padding-left: 20px
+    float: left
+    display: inline-block
+    border-left: 1px dashed #ccc
+    min-height: 222px
+    max-height: 222px
+    overflow: auto
+    width: 350px
+    form
+      label
+        display: block
+      input[type=text]
+        width: 150px
+      input
+        display: inline
+        &.inline
+          margin: 0
+    ul
+      list-style-type: none
+      max-height: 150px
+      li
+        padding: 0
+        margin: 0
+        padding-bottom: 5px
+
+ul.ui-autocomplete
+  z-index: 1100

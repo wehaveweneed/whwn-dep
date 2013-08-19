@@ -1,0 +1,26 @@
+{% extends "_base.html" %}
+
+{% block content %}
+    <div id="subscribe-content">
+        <div id="column-1">
+            {% include "_page_title.html" with title="We apologize! We're not ready yet. " %}
+            <p>
+                But you can bet that we're working hard to get We Have We Need
+                out to the people that need it. <b>If you want to get updates and
+                get notified when we are ready, subscribe to our mailing list
+                by submitting your email to our <a href="http://www.mailchimp.com">Mailchimp</a></b>
+                to the right.
+            </p>
+            <form action="http://wehave-weneed.us5.list-manage.com/subscribe/post?u=176c5f85726d5ea35430badda&amp;id=c0cd6d1de0" method="post" target="_blank" novalidate>
+                <label for="mce-EMAIL">Subscribe to our mailing list</label>
+                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+            </form>
+        </div>
+        <div id="column-2">
+            <div id="img-container">
+                <img src="https://s3.amazonaws.com/whwnhaiti/atwork.jpg" />
+            </div>
+        </div>
+    </div>
+{% endblock %}

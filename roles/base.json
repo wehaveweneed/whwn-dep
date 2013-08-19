@@ -1,0 +1,30 @@
+{
+    "name": "base",
+    "default_attributes": {},
+    "override_attributes": {
+      "elasticsearch": {
+        "allocated_memory": "64M"
+      },
+      "redis": {
+        "install_type": "source"
+      },
+      "python": {
+        "version" : "2.7.3",
+        "install_method": "source",
+        "checksum": "d4c20f2b5faf95999fd5fecb3f7d32071b0820516224a6d2b72932ab47a1cb8e"
+      },
+      "postgis": {
+        "version": "1.5.8",
+        "checksum": "d1af1e8544b9d22285d81efb63d59a1648c9c960"
+      },
+      "node": {
+        "version": "v0.8.21"
+      }
+    },
+    "json_class": "Chef::Role",
+    "description": "Base role",
+    "run_list": ["apt", "java", "whwn::make", "python", "elasticsearch", "redis::server",
+                 "supervisor", "git"]
+}
+     
+

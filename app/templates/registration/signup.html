@@ -1,0 +1,42 @@
+{% extends "_base.html" %}
+
+{% block content %}
+    <div id="index-content">
+        <div id="column-1">
+            {% include "_page_title.html" with title="next step: fill out the form!" %}
+            <ul>
+                <li>Fill out the form on the right to start the 
+                    sign up process.</li>
+                <li>We will not share any of your information
+                    with anybody, guaranteed.</li>
+                <li>Did you know? All of We Have We Need's data is fully
+                    encrypted. You can be sure that the data is safe with
+                    us.</li>
+            </ul>
+        </div>
+        <div id="column-2">
+            <div id="login-container">
+                <span class="login-title"><h1>sign up</h1></span>
+            </div>
+            <div id="login-form-container">
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form.non_field_errors }}
+                    {% for field in form %}
+                        <div id="form_field">
+                            {{ field.label_tag }}
+                            {{ field }}
+                            {{ field.errors }}
+                            <span class="help-inline"></span>
+                        </div>
+                    {% endfor %}
+                    <input type="submit" value="Sign up" />
+                    <div class="extra_links">
+                        <a href='{% url home %}'>Go Back</a>
+                        <br />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

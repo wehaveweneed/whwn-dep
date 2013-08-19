@@ -1,0 +1,63 @@
+{% load header_extras %}
+{% block header %}
+    {% if user.is_anonymous %}
+    <div id="header-content" class="extended-header">
+    {% else %}
+    <div id="header-content">
+    {% endif %}
+        <div id="header-logo">
+            <div id="logo-container"><img id="whwn-cube-arrow-logo" src="//s3.amazonaws.com/whwnhaiti/whwn.png" width=24px height=24px /></div>
+            <div id="logo-text-container"><a href="{% url home %}">we<span class="logo-have">have</span>we<span class="logo-need">need</span></a></div>
+        </div>
+        {% if user.is_anonymous %}
+        <div id="header-navigation-menu-container">
+            <ul id="header-navigation-menu">
+                <a href="{% url registration_register %}">
+                    <li class="header-navigation-menu-item">
+                        <span class="header-navigation-main-menu-item">
+                            NEW USER?
+                        </span>
+                        <br/>
+                        <span class="header-navigation-sub-menu-item">
+                            Click here to sign up.
+                        </span>
+                    </li>
+                </a>
+            </ul>
+        </div>
+
+        <div id="header-subheader-container">
+            <h1>Supply sharing for disaster relief.</h1>
+            <h3>A simple and secure service that allows you to communicate with those around you about supplies.</h3>
+        </div>
+        {% else %}
+        <div id="header-navigation-menu-container">
+            <ul id="header-navigation-menu">
+                </a>
+                <a href="{% url inventory_list %}">
+                <li class="header-navigation-menu-item {% active request '^/inventory' %}">
+                    <span class="header-navigation-main-menu-item">
+                        <span id="step2">Inventory</span>
+                    </span>
+                </li>
+                </a>
+                <!--<a href="{% url users:settings %}">-->
+                <!--<li class="header-navigation-menu-item {% active request '^/users/settings' %}">-->
+                    <!--<span class="header-navigation-main-menu-item">-->
+                        <!--<span id="step5">Settings</span>-->
+                    <!--</span>-->
+                    <!--<br/>-->
+                    <!--<span class="header-navigation-sub-menu-item"></span>-->
+                <!--</li>-->
+                <!--</a>-->
+                <a href="{% url accounts:logout %}">
+                <li class="header-navigation-menu-item">
+                    <span class="header-navigation-main-menu-item">Log out</span>
+                    <!--<span class="header-navigation-sub-menu-item">{{ request.user }}</span>-->
+                </li>
+                </a>
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+{% endblock %}

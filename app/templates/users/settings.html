@@ -1,0 +1,91 @@
+{% extends '_base.html' %}
+{% block title %}Settings{% endblock %}
+{% load require %}
+{% block after_dom %}
+    {% require_module 'main' %}
+{% endblock after_dom %}
+
+{% block content %}
+<div id="settings-content">
+    {% include "_page_title.html" with title="Settings" %}
+
+    <div id="settings-main-container">
+        <div id="account-settings-container">
+            <h3>Account Settings</h3>
+            <table>
+                <tr id="username">
+                    <td class="label">Username</td>
+                    <td class="current-value">{{ account.username }}</td>
+                    <td class="edit"></td>
+                </tr>
+                <tr id="email">
+                    <td class="label">Email</td>
+                    <td class="current-value">{{ account.email }}</td>
+                    <td class="edit"><a class="edit-email" href="#">edit</a></td>
+                </tr>
+                <tr id="phone_number">
+                    <td class="label">Phone Number</td>
+                    <td class="current-value">{{ account.phone_number }}</td>
+                    <td class="edit"><a class="edit-phone_number" href="#">edit</a></td>
+                </tr>
+                <tr id="password">
+                    <td class="label">Password</td>
+                    <td class="current-value">{{ account.password }}</td>
+                    <td class="edit"><a class="edit-password" href="#">edit</a></td>
+                </tr>
+                <tr id="date-format">
+                    <td class="label">Date Format</td>
+                    <td class="current-value">{{ account.date_format }}</td>
+                    <td class="edit"><!--a href="#">edit</a--></td>
+                </tr>
+                <tr id="time-format">
+                    <td class="label">Time Format</td>
+                    <td class="current-value">{{ account.time_format }}</td>
+                    <td class="edit"><!--a href="#">edit</a--></td>
+                </tr>
+            </table>
+        </div>
+        <div id="team-selection-container">
+            <h3>Teams</h3>
+            <table>
+                <tr id="current-team">
+                    <td class="label">Current Team</td>
+                    <td class="current-value">{{ account.team.name }}</td>
+                    <td class="edit"><a class="edit-team" href="#">change</a></td>
+                </tr>
+            </table>
+        </div>
+        <div id="communication-preferences-container">
+            <h3>Communication Preferences</h3>
+            <table>
+                <tr id="email-notification">
+                    <td class="label">Email Notifications</td>
+                    <td class="current-value">{{ comm.email }}</td>
+                    <td class="edit"><a id="edit-email-notifications" href="#">edit</a></td>
+                </tr>
+                <tr id="sms-notification">
+                    <td class="label">Text Notifications</td>
+                    <td class="current-value">{{ comm.sms }}</td>
+                    <td class="edit"><a id="edit-text-notifications" href="#">edit</a></td>
+                </tr>
+            </table>
+        </div>
+        <div id="locations-container">
+            <h3>Locations</h3>
+            <h4>Default Location</h4>
+              <div id="default-location-container">
+                {% if default_location %}
+                    {% include "users/_location_tile.html" with location=default_location %}
+                {% endif %}
+              </div>
+            <h4>Other Locations</h4>
+              <div id="other-locations-container">
+                {% for location in locations %}
+                    {% include "users/_location_tile.html" with location=location %}
+                {% endfor %}
+              </div>
+            <h4><a href="#" id="add-location">+ Add Location</a></h4>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends "_base.html" %}
+
+{% block page_title %}
+  Maps
+{% endblock %}
+
+{% block script %}
+        <script type="text/javascript">
+            $(function() {
+
+                var categories = [];
+                {% for category in categories %}
+                    categories["{{ category }}"] = new L.LayerGroup();
+                {% endfor %}
+
+                var postMarker;
+                {% for post in posts %}
+                    postMarker = new L.Marker(
+                            new L.LatLng("{{ post.location.latitude }}", "{{ post.location.longitude }}"))
+                            .bindPopup("{{ post }}");
+
+                    categories["{{ post.categories }}"].addLayer(postMarker);
+                {% endfor %}
+
+                var tilestreamUrl = 'http://tilestream-inhaiti.dotcloud.com/1.0.0/inhaiti/{z}/{x}/{y}.png';
+                var tilestreamOptions = {
+                    maxZoom: 15,
+                    minZoom: 9,
+                    scheme: 'tms',
+                    attribution: ""
+                };
+                var minimal = new L.TileLayer(tilestreamUrl, tilestreamOptions);
+
+                var layers = [];
+                layers.push(minimal);
+                for (var c in categories){
+                    layers.push(categories[c]);
+                }
+
+                var map = new L.Map('map', {
+                    center: new L.LatLng(19, -72),
+                    zoom: 10,
+                    layers: layers
+                });
+
+                var baseMaps = {
+                    "Minimal": minimal
+                };
+
+                var overlayMaps = {
+                    {% for category in categories %}
+                        "{{ category }}" : categories["{{ category }}"],
+                    {% endfor %}
+                };
+
+                var layersControl = new L.Control.Layers(baseMaps, overlayMaps);
+
+                map.addControl(layersControl);
+            });
+        </script>
+{% endblock %}
+
+{% block content %}
+    <div id="map" class="container"></div>
+{% endblock %}

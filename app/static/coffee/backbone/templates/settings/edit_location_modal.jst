@@ -1,0 +1,24 @@
+<div id="edit-location-modal-contents">
+    <a class="modalCloseImg simplemodal-close" title="Close"></a>
+    <div id="edit-<%= id %>-map" style="width:640px; height:350px"></div>
+    <div class="column-1">
+        <form id="update-location-form" data-id="<%= id %>">
+            <label for="name">Location name: </label>
+            <input type="text" name="name" value="<%= name %>" />
+            <label for="latitude">Latitude: </label>
+            <input type="text" name="latitude" value="<%=latitude %>" />
+            <label for="longitude">Longitude: </label>
+            <input type="text" name="longitude" value="<%=longitude %>" />
+            <input type="submit" value="Submit Location Update" />
+        </form>
+    </div>
+    <div class="column-2">
+        <form id="geocode-location-form">
+            <label for="query">Location search: </label>
+            <input type="text" name="gq" placeholder="eg. Manhattan, Statue of Liberty" />
+            <input type="submit" class="inline" value="Search" />
+        </form>
+        <ul class="geocode-search-results">
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="location-tile" class="location-tile" data-id="{{ location.id }}" data-name="{{ location.name }}" data-longitude="{{ location.longitude }}" data-latitude="{{ location.latitude }}">
+    <div id="map-{{ location.id }}" class="location-map">
+    </div>
+	<table class="location-details">
+        <tr class="name">
+            <td class="label">Name:</td>
+            <td class="current-value">{{ location.name }}</td>
+        </tr>
+        <tr class="latitude">
+            <td class="label">Latitude:</td>
+            <td class="current-value">{{ location.latitude }}</td>
+        </tr>
+        <tr class="longitude">
+            <td class="label">Longitude:</td>
+            <td class="current-value">{{ location.longitude }}</td>
+        </tr>
+    </table>
+    <div class="location-tile-links">
+        <table>
+            <td><a class="edit-location" href="#" data-id="{{ location.id }}">edit</a></td>
+            <td><a class="make-default-location" href="#" data-id="{{ location.id }}">make default</a></td>
+            <td><a class="delete-location" href="#" data-id="{{ location.id }}">delete</a></td>
+        </table>
+    </div>
+</div>

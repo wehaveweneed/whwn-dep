@@ -1,0 +1,219 @@
+@import "sassy-buttons"
+.admin-panel
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+  font-weight: 500
+  .rounded-one
+    width: 100px
+    height: 100px
+    background: #fcfff4
+    //background: +linear-gradient(color-stops(#fcfff4 0%, #dfe5d7 40%, #b3bead 100%), top)
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 )
+    margin: 20px auto
+    -webkit-border-radius: 50px
+    -moz-border-radius: 50px
+    border-radius: 50px
+    -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5)
+    -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5)
+    box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.56)
+    position: relative
+    margin-top: 138px
+    label
+      cursor: pointer
+      position: absolute
+      width: 90px
+      height: 90px
+      -webkit-border-radius: 50px
+      -moz-border-radius: 50px
+      border-radius: 50px
+      left: 5px
+      top: 5px
+      -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 1)
+      -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 1)
+      box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 1)
+      //background: +linear-gradient(color-stops(#222222 0%, #45484d 100%), top)
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#222', endColorstr='#45484d',GradientType=0 )
+    label:after
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+      filter: alpha(opacity = 0)
+      opacity: 0
+      content: ''
+      position: absolute
+      width: 84px
+      height: 84px
+      background: #00bf00
+      //background: +linear-gradient(color-stops(#00bf00 0%, #009400 100%), top)
+      -webkit-border-radius: 50px
+      -moz-border-radius: 50px
+      border-radius: 50px
+      top: 3px
+      left: 3px
+      -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5)
+      -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5)
+      box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5)
+    label:hover::after
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)"
+      filter: alpha(opacity = 30)
+      opacity: 0.3
+  .rounded-one-selected
+    @extend .rounded-one
+    label:after
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+      filter: alpha(opacity = 0)
+      opacity: 1
+      content: ''
+      position: absolute
+      width: 84px
+      height: 84px
+      background: #00bf00
+      //background: +linear-gradient(color-stops(#00bf00 0%, #009400 100%), top)
+      -webkit-border-radius: 50px
+      -moz-border-radius: 50px
+      border-radius: 50px
+      top: 3px
+      left: 3px
+      -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5)
+      -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5)
+      box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5)
+  .rounded-one-small
+    @extend .rounded-one
+    height: 28px
+    width: 28px
+    margin-top: 15px
+    float: left
+    margin-top: 61px
+    margin-left: 10px
+    label
+      height: 20px
+      width: 20px
+      left: 4px
+      top: 4px
+    label:after
+      width: 16px
+      height: 16px
+      top: 2px
+      left: 2px
+  .rounded-one-small-selected
+    @extend .rounded-one-small
+    label:after
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+      filter: alpha(opacity = 0)
+      opacity: 1
+      content: ''
+      position: absolute
+      width: 16px
+      height: 16px
+      background: #00bf00
+      //background: +linear-gradient(color-stops(#00bf00 0%, #009400 100%), top)
+      -webkit-border-radius: 50px
+      -moz-border-radius: 50px
+      border-radius: 50px
+      top: 2px
+      left: 2px
+      -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5)
+      -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5)
+      box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5)
+  .centered-button
+    position: relative
+    left: 50%
+    margin-left: -118px
+    margin-bottom: 50px
+  .title-bar
+    height: 35px
+    padding: 10px
+    margin-bottom: 20px
+    font-size: 30px
+  .margin-center
+    margin-left: auto
+    margin-right: auto
+    margin-top: 10px
+  .start-button
+    -moz-box-shadow: inset 0px 0px 0px 0px rgb(78, 149, 0)
+    -webkit-box-shadow: inset 0px 0px 0px 0px rgb(78, 149, 0)
+    box-shadow: inset 0px 0px 0px 0px rgb(78, 149, 0)
+    //background: +linear-gradient(color-stops(rgb(95, 182, 0) 5%, rgb(78, 149, 0) 100%), top)
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgb(95,182,0)', endColorstr='rgb(78,149,0)')
+    background-color: #ededed
+    -moz-border-radius: 7px
+    -webkit-border-radius: 7px
+    border-radius: 7px
+    border: 1px solid #dcdcdc
+    display: inline-block
+    color: white
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+    font-size: 65px
+    font-weight: 600
+    padding: 12px 30px
+    text-decoration: none
+    text-shadow: 1px 1px 0px #ffffff
+    letter-spacing: 5px
+  .start-button:hover
+    //background: +linear-gradient(color-stops(rgb(78, 149, 0) 5%, rgb(95, 182, 0) 100%), top)
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgb(78,149,0)', endColorstr='rgb(95,182,0)')
+    background-color: #dfdfdf
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+  .start-button:active
+    position: relative
+    top: 1px
+  .next-button
+    @include sassy-button("simple", 10px, 19px, #4ba3cc)
+    position: fixed
+    right: 10px
+    margin-right: 201px
+    bottom: 10px
+  .snippet
+    background-color: #FFF5EE
+    color: #000000
+    width: 60%
+    height: 150px
+    border: solid 1px #888888
+    font-size: 15px
+    padding: 5px
+  .item-query
+    margin-top: 20px
+    margin-left: 300px
+    border: solid
+    border-width: 2px
+    width: 1057px
+    overflow: scroll
+    height: 600px
+  .item-query-right, .item-query-left
+    float: left
+    width: 48%
+    min-height: 10px
+    padding-left: 1%
+    overflow: scroll
+    height: 600px
+  .item
+    position: static
+  .item-title
+    font-weight: bold
+    font-size: 2.0em
+    display: inline
+  .item-amount
+    display: inline
+    font-size: 1.2em
+    font-weight: bold
+  li
+    margin-left: 38px
+    list-style-type: none
+    font-weight: bold
+    font-size: 1.0em
+    margin-top: 5px
+  .list-desc
+    font-size: 1.0em
+    display: inline-block
+    font-weight: normal
+  .smaller-title
+    margin-left: -25px
+    display: inline
+    font-weight: bold
+    font-size: 1.1em
+    text-decoration: underline
+  .item-recc
+    margin-top: 10px
+    padding-left: 10px
+    background-color: #BEC1D0
+    padding-top: 1px
+    padding-bottom: 1px
+    border-radius: 15px
+    margin-bottom: 5px

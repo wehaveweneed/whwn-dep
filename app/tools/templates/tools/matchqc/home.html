@@ -1,0 +1,69 @@
+{% extends "tools/_tools_base.html" %}
+
+{% block title %}
+Match and Search Panel
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="http://localhost:8000/static/.css/matchqc.css">
+{% endblock %}
+
+{% block before_main %}
+
+
+<div class="admin-panel">
+    <div class="title-bar"></div>
+    <div class="centered-button" >
+        <a href="#" class="start-button">Start</a>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js" type="text/javascript"></script>
+    <div class="snippet margin-center">Code here
+    </br>
+    # TIP: Item is good if the result is within the first 5 matches.
+    </div>
+<!--
+    {% for item in items %}
+    <div class= "item-query" >
+        <div class="item-query-left" > 
+            <!-- template for a item -->
+        <div class="item">
+            <div class="item-title"> {{ item.0.name }} </div>
+            <div class="item-amount">x{{ item.0.amount }}  </div> 
+                <ul>
+                 <li>{% if item.0.is_needed %} Need {% else %} Have {% endif %} </li> 
+                 <li>Description: <div class="list-desc" > {{ item.0.description }}  </div></li> 
+                 <li>Iteming Date:  <div class="list-desc" > {{ item.0.itemed_date }} </div></li>
+                 <li>Categories: <div class="list-desc" >  {{ item.0.categories }}   </div></li>
+                </ul>
+        </div>
+        <div class="rounded-one-selected">
+            <label for="rounded-one"></label>
+        </div>
+    </div>
+        <div class="item-query-right">  
+            {% for match in item.1 %}
+        <div class="rounded-one-small-selected">
+            <label for="rounded-one-small"></label>
+        </div>
+        <div class="item-recc"> 
+                <ul>
+                  <div class="smaller-title"> {{match.name}}x{{match.amount}} </div>
+                 <li>{% if match.is_needed %} Need {% else %} Have {% endif %} </li> 
+                 <li>Description: <div class="list-desc" > {{match.description}}  </div></li> 
+                 <li>Iteming Date:  <div class="list-desc" > {{match.itemed_date}} </div></li>
+                 <li>Categories: <div class="list-desc" >  {{match.categories}} </div></li>
+                </ul>
+        </div>
+        {% endfor %}
+        </div>
+    </div>
+
+    {% endfor %}
+    </div>
+
+
+
+-->
+
+{% endblock %}

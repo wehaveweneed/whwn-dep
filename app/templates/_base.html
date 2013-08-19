@@ -1,0 +1,99 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="google-site-verification" content="wu6bh1yazO2nttfDF6Y02avXQ_0pk_qbm8fTxGT6aqY" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <!-- Might raise mixed content warnings or whine about Leaflet's CDN having the wrong certificate. -->
+        <!-- Host locally if it causes problems. -->
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.css" />
+
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.ie.css" />
+            <link rel="stylesheet" href="/static/vendor/css/L.Control.Zoomslider.ie.css" />
+        <![endif]-->
+        <script src="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.js"></script>
+        <title>{% block title %}whwn{% endblock %} &mdash; We Have We Need</title>
+
+        <!--[if !IE 7]>
+            <link rel="stylesheet" href="/static/stylesheets/ie.css" type="text/css" charset="utf-8">
+        <![endif]-->
+
+        {% load compressed %}
+        {% compressed_css 'app' %}
+
+        <script type="text/javascript">
+            var WHWN =  {
+                {% if debug %}
+                    env: "dev",
+                {% else %}
+                    env: "prod",
+                {% endif %}
+                boundingBoxes: [],
+                username: "{{ request.user.username }}"
+            };
+            var require = {
+                config: {
+                    backbone_tastypie: {
+                        key: "{{ request.user.api_key.key }}",
+                        username: WHWN.username
+                    },
+                    "models/realtimeEvent": {
+                        username: WHWN.username
+                    }
+                }
+            };
+
+            // require(["mapper"], function(){
+            //   WHWN.boundingBoxes.push({ name: "Staten Island", boundingBox: new BoundingBox(-74.239426, 40.910503, -73.629684, 40.477352)});
+            //   WHWN.boundingBoxes.push({ name: "San Diego", boundingBox: new BoundingBox(-117.5, 32.9, -117, 32.5)});
+            // });
+        </script>
+
+        {% block import_scripts %}
+        {% endblock %}
+
+        <script src="https://use.edgefonts.net/source-sans-pro.js"></script>
+        {% if not debug %}
+        <script type="text/javascript">
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-35941094-1']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
+        </script>
+        {% endif %}
+        <script>
+        {% block requires %}
+        {% endblock %}
+        {% block script %}
+        {% endblock %}
+        </script>
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="header">
+                {% include "_header.html" %}
+            </div>
+                {% block before_main %}
+                {% endblock %}
+            <div id="main">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+        <div id="footer">
+                {% include "_footer.html" %}
+        </div>
+    </body>
+    {% block after_dom %}
+    {% endblock after_dom %}
+</html>

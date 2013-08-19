@@ -1,0 +1,113 @@
+# django-registration provides a registration backend that
+# plays nice with django.auth
+django-registration==0.8
+
+# django framework
+Django==1.4.3
+
+# helpful functions that are annoying to implement over and
+# over again
+django-annoying==0.7.6
+
+# Debugging tools
+Werkzeug==0.8.3
+# django-debug-toolbar==0.9.4
+-e git+https://github.com/django-debug-toolbar/django-debug-toolbar.git#egg=django-debug-toolbar
+django-extensions==1.0.2
+django-devserver==0.4.0
+
+# task queue integration with django
+django-celery==3.0.11
+django-celery-with-redis==3.0
+
+# nose test runner integration with django
+django-nose==1.1
+
+# jenkins integration with django
+django-jenkins==0.14.0
+
+# postmark python api
+python-postmark==0.3.2
+
+# twilio service python api
+twilio==3.4.2
+
+# streamlines ssh for application deployment, or in our case,
+# vagrant.
+Fabric==1.5.1
+
+# yaml support for python
+PyYAML==3.10
+
+# Needs Description
+Hoover==0.5.3
+
+# Testing framework that automates web applications
+# via browser simulation
+WebTest==1.4.3
+django-webtest==1.5.4
+
+# Create instances from models on the fly
+factory-boy==1.2.0
+
+# Stemming library for python
+PyStemmer==1.2.0
+
+# Image processing library for python (PIL)
+Pillow==1.7.8
+
+# Postgresql adapter
+psycopg2==2.4.6
+
+# Automatic migrations for our databases
+South==0.7.6
+
+# Custom titles for processes
+setproctitle==1.1.6
+
+# Distributed Task Queue
+celery==3.0.13
+
+# Concatenates, minifies, and serves our static files
+django-pipeline==1.2.24
+django-require==1.0.2
+django-pipeline-compass-rubygem
+
+# Check code against Python style conventions
+pep8==1.4
+
+# Analyzes Python programs and detects various errors
+pyflakes==0.5.0
+
+# Creates RESTFUL resources and apis for Django
+django-tastypie==0.9.15
+
+# Provides fake text
+Faker==0.0.4
+
+# Helper for admin views
+django-adminplus==0.1.7
+
+# Search
+pyelasticsearch==0.3
+django-haystack==2.0.0
+requests==1.0.4
+
+# Redis
+redis==2.7.2
+
+# Full featured redis cache backend for Django
+django-redis==3.1.5
+
+# Redis parser
+hiredis==0.1.1
+
+# Tweeppy
+tweepy==1.12
+
+# Heroku
+gunicorn
+dj-database-url
+django-storages
+boto
+newrelic

@@ -1,0 +1,213 @@
+@import "compass/css3/box-shadow"
+@import "compass/css3/images"
+
+#inventory-page-container
+  min-height: 100%
+  +grid(16)
+  +alpha
+  +omega
+
+  #inventory-app-container
+    margin-top: 10px
+    margin-bottom: 20px
+    +grid(10)
+    +alpha
+    float: left
+
+    #inventory-app-header
+      background: #fafafa
+      +border-radius(3px)
+      border: 1px solid #ddd
+      margin-bottom: 10px
+
+      #buttons
+        +border-radius(3px)
+        input
+          margin: 5px 0 5px 5px
+          font-size: 13px
+          font-weight: bold
+          text-shadow: 0 1px 0 #fff
+          text-align: center
+          padding: 7px 0
+          min-width: 120px 
+          +background-image(linear-gradient(#fafafa, #eaeaea))
+          border: 1px solid #ccc
+          +border-radius(3px)
+
+          &[disabled]
+            border-color: #dedede
+            background: #fafafa
+            color: #aaa
+          
+          &:hover
+            color: white
+            cursor: pointer
+            text-shadow: none
+
+            &#add-button
+              +background-image(linear-gradient(#61ce6d, #11891d))
+              border-color: #11891d
+
+              &[disabled]
+                background: #fafafa
+                border: 1px solid #dedede
+                color: #aaa
+
+            &#remove-button
+              +background-image(linear-gradient(#ff9696, #bf0101))
+              border-color: #bf0101
+
+              &[disabled]
+                background: #fafafa
+                border: 1px solid #dedede
+                color: #aaa
+
+          &:active
+            text-shadow: #aaa
+
+            &#add-button
+              +background-image(linear-gradient(#11891d, #61ce6d))
+              border-color: #11891d
+
+              &[disabled]
+                background: #fafafa
+                border: 1px solid #dedede
+                color: #aaa
+
+            &#remove-button
+              +background-image(linear-gradient(#bf0101, #ff9696))
+
+              &[disabled]
+                background: #fafafa
+                border: 1px solid #dedede
+                color: #aaa
+
+      #tab-list-container
+        border: 1px solid #ddd
+        border-left: 0
+        border-right: 0
+        border-bottom: 0
+        +background-image(linear-gradient(#fafafa, #eaeaea))
+        +border-radius(3px)
+
+        #tab-list
+          list-style-type: none
+          overflow: hidden
+          margin-bottom: 0
+          z-index: 2
+
+          li.tab
+            float: left
+            color: #555
+            font-size: 12px
+            font-weight: bold
+            text-shadow: 0 1px solid #aaa
+            text-align: center
+            padding: 9px 0 9px 0
+            margin: 0
+            min-width: 130px
+            border-bottom: 2px solid #ccc
+            border-right: 1px solid #ddd
+
+            &:hover
+              color: #3b88cc
+              +background-image(linear-gradient(#f7faff, #eaeaea))
+              cursor: pointer
+
+            &.selected
+              color: black
+              border-bottom: 2px solid #138eff
+            
+    #inventory-list, #requests-list
+      border: 3px solid #efefef
+      +border-radius(3px)
+      max-width: 100%
+
+      table.backgrid
+        table-layout: fixed
+        
+        th.select-all-header-cell
+          width: 30px
+
+#inventory-chat-container
+  +grid(6)
+  +alpha
+  +omega
+  +background-image(linear-gradient(#fafafa, #f8f8f8))
+  margin-top: 20px
+  margin-bottom: 20px
+  float: left
+  +border-radius(3px)
+  border: 1px solid #ddd
+  overflow: hidden
+
+  #inventory-chat-content
+    border: 1px solid #efefef
+    width: 100%
+
+    #chat-box-header
+      text-align: center
+      width: 100%
+      font-weight: bold
+      line-height: 2.0em
+      border-bottom: 1px solid #ccc
+
+    ul#chat-messages
+      list-style-type: none
+      max-height: 500px
+      overflow-y: scroll
+      margin: 0
+
+      li
+        background: white
+        padding: 7px
+        margin: 0
+        border-bottom: 1px solid #ccc
+        box-shadow: 0 1px 1px #fff
+
+        &.own-message
+          background: #e6f1f6
+
+      div#message
+        .header
+          overflow: hidden
+          text-shadow: 0 1px 1px #fff
+          padding-bottom: 5px
+          .author
+            float: left
+            color: #444
+          .timestamp
+            float: right
+            font-style: italic
+            color: #999
+        .contents
+          color: black
+        
+  #inventory-chat-input-container
+    width: 100%
+    input[type=text]
+      padding: 3px
+      width: auto
+      border: 1px solid #ddd
+      height: 25px
+      -webkit-box-sizing: border-box
+      -moz-box-sizing: border-box
+      box-sizing: border-box
+      width: 270px
+      float: left
+      margin: 0
+      &:focus
+        outline: none
+
+    input[type=button]
+      width: 70px
+      padding: 3px
+      float: left
+      height: 25px
+      -webkit-box-sizing: border-box
+      -moz-box-sizing: border-box
+      box-sizing: border-box
+      +background-image(linear-gradient(#fafafa, #eaeaea))
+      border: 1px solid #ccc
+      font-weight: bold
+

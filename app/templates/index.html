@@ -1,0 +1,234 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="google-site-verification" content="wu6bh1yazO2nttfDF6Y02avXQ_0pk_qbm8fTxGT6aqY" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <title>We Have, We Need: Lightweight inventory management software for agile teams</title>
+        <script src="https://use.edgefonts.net/source-sans-pro.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        {% load compressed %}
+        {% compressed_css 'app' %}
+    </head>
+    <body>
+        <div id="site-navigation-header">
+            <div class="inner-body">
+                <ul id="site-links">
+                    <li><a href="{% url about %}">about</a></li>
+                    <li><a href="http://whwn.tumblr.com">blog</a></li>
+                    <li><a href="{% url sponsor %}">sponsors</a></li>
+                    <li><a href="{% url help %}">help</a></li>
+                    <li><a href="{% url contact %}">contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="page-navigation-header">
+            <div class="inner-body">
+                <div id="logo-container">
+                    <img id="whwn-logo" src="https://s3.amazonaws.com/whwnhaiti/img/whwnlogo.jpg" width=230 />
+                </div>
+                <div class="container">
+                    <ul id="page-links">
+                        <a href="#ourstory"><li>our story</li></a>
+                        <a href="#howitworks"><li>how it works</li></a>
+                        <a href="{% url registration_register %}"><li>sign up</li></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="above-fold">
+            <div class="inner-body">
+                <div class="section-one">
+                    <div class="left">
+                        <h1>We help humanitarians <b>manage</b>, <b>share</b>, and <b>talk</b> about supplies in disaster relief situations</h1>
+                        <img id="whwn-logo" src="https://s3.amazonaws.com/whwnhaiti/img/WHWNgraphic.jpg" width=525 height=200/>
+                    </div>
+                    <div class="right">
+                        <h4>Member login</h4>
+                        <form id="login-form" method="POST">
+                            {% csrf_token %}
+                            {{ form.non_field_errors }}
+                            {% for field in form %}
+                                {{ field.label_tag }}
+                                {{ field }}
+                                {{ field.errors }}
+                                <span class="help-inline"></span>
+                            {% endfor %}
+                            <div class="button-container">
+                                <input type="submit" value="sign in" />
+                            </div>
+
+                            <ul class="extra_links">
+                                <li>
+                                    <a href="{% url auth_password_reset %}">forgot password?</a>
+                                </li>
+                            </ul>
+                        </form>
+                        <button style="cursor: pointer;" onClick="location.href='{% url registration_register %}';">Sign up</button><br />
+                        <p>Or learn more about <a href="#howitworks">how it works</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="above-fold-two">
+            <div class="inner-body">
+                <div class="section-two">
+                    <ul id="feature-list">
+                        <li>
+                            <h3>Manage your inventory.</h3>
+                            <p>
+                                A simple interface gives you the information you need to manage
+                                your inventory at a glance, and enables you to rapidly update items.
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Communicate with your team.</h3>
+                            <p>
+                                Group chat and SMS notifications ensure everyone is up to date
+                                and consolidates it into one place.
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Share with others on the ground.</h3>
+                            <p>
+                                Request supplies from nearby NGOs and humanitarians rather than
+                                waiting for supplies to be delivered.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="our-story">
+            <div class="inner-body">
+                <a name="ourstory"><h3>our story</h3></a>
+                <div class="section-one">
+                    <div class="left">
+                        <h1>"Humanitarians are struggling to get the most basic supplies necessary to respond
+                            to a crisis. And first-responders are stuck doing things that computers should do, like
+                            tracking inventory."</h1>
+                    </div>
+                    <div class="right">
+                    </div>
+                </div>
+                <div class="section-two">
+                    <div class="left">
+                        <h3>In the heat of the moment, keeping track of supplies is tough.</h3>
+                        <p>
+                            We want to make this as easy as possible, so people can spend less time counting 
+                            things and more time helping people.
+                        </p>
+                    </div>
+                    <div class="right">
+                        <h3>Working with other groups should be simpler.</h3>
+                        <p>
+                            We were shocked at how often teams of humanitarians operated in silos; we're
+                            determined to change this. Two hammers are better than one, yo.
+                        </p>
+                    </div>
+                </div>
+                <div class="section-three">
+                    <div class="left">
+                        <img src="https://s3.amazonaws.com/whwnhaiti/img/ourstory.png" width=400 height=255 />
+                    </div>
+                    <div class="right">
+                        <p>
+                            We Have, We Need was started by a ragtag group of students at the 
+                            University of California, San Diego who were determined to bring disaster relief 
+                            into the twenty-first century. Ambitious, student-led, and self-taught, these hackers 
+                            built the foundation for We Have, We Need before open-sourcing it. WHWN was built with 
+                            the belief that this software should be accessible to anyone who needs it. That's why 
+                            WHWN is built on open technologies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="cool-melody-border">
+            <div class="inner-body">
+                <h1>We exist to ease operations on the ground.</h1>
+            </div>
+        </div>
+        <div id="how-it-works">
+            <div class="inner-body">
+                <a name="howitworks"><h3>how it works</h3></a>
+                <div class="section-one">
+                    <div class="left">
+                        <img src="https://s3.amazonaws.com/whwnhaiti/img/whwnimg1.png" width=390 />
+                    </div>
+                    <div class="right">
+                        <h2>Use our tools to manage inventory.</h2>
+                        <p>
+                            Once you've created a team, everyone can manage the inventory in
+                            real-time. With an intuitive, spreadsheet-like interface you'll be
+                            able to get off the ground and running quickly.
+                        </p>
+                    </div>
+                </div>
+                <div class="section-two">
+                    <div class="left">
+                        <h2>Communicate and log inventory changes with
+                        our chat tool</h2>
+                        <p>
+                            Use the group chat tool to communicate with your team without taking
+                            your focus off the inventory. Set up SMS notifications so that everyone
+                            is in the loop, even when they are on the go.
+                        </p>
+                    </div>
+                    <div class="right">
+                        <img src="https://s3.amazonaws.com/whwnhaiti/img/whwnimg2.png" height=460 />
+                    </div>
+                </div>
+                <div class="section-three">
+                    <div class="left">
+                        <img src="https://s3.amazonaws.com/whwnhaiti/img/whwnimg3.png" width=390 />
+                    </div>
+                    <div class="right">
+                        <h2>Request supplies and our system will notify
+                        you if there is a match nearby.</h2>
+                        <p>
+                            If there's something you need, created a public request. We'll
+                            automatically match these to other, nearby groups, and let them know
+                            you need help.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="action-boxes">
+            <div class="inner-body">
+                <ul id="action-list">
+                    <li>
+                        <h3>Humanitarians,<br />sign up!</h3>
+                        <p>Don't let supplies be yor bottleneck.</p>
+                        <div class="container">
+                            <button style="cursor: pointer;" onClick="location.href='{% url registration_register %}';">
+                                Sign up for free
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Interesting in<br />getting involved?</h3>
+                        <p>There are lots of ways you can help us support humanitarians</p>
+                        <div class="container">
+                            <button style="cursor: pointer;" onClick="location.href='#';">
+                               Learn more 
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Developers,<br />want to contribute?</h3>
+                        <p>We're open-source. Come join us and make a difference.</p>
+                        <div class="container">
+                            <button style="cursor: pointer;" onClick="location.href='#';">
+                                Hack with us 
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

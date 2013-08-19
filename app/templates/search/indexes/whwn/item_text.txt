@@ -1,0 +1,5 @@
+{{ object.sku.name }}
+{{ object.sku.description }}
+{{ object.sku.team }}
+{{ object.quantity }}
+{{ object.possessor }}

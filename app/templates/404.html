@@ -1,0 +1,15 @@
+{% extends "_base.html" %}
+
+{% block content %}
+    <div id="index-content">
+        <div id="column-1">
+        Sorry, but the page you are looking for has not been found. Try checking the URL for errors,
+        then hit the refresh button on your browser. Or, you can click <a href="{% url home %}">here</a> to return to the homepage.  
+        </div>
+
+        <div id="column-2">
+            <img src="{{STATIC_URL}}img/fallen_star.jpg">
+        </div>
+    </div>
+    
+{% endblock %}

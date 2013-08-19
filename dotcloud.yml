@@ -1,0 +1,30 @@
+db:
+  type: postgis
+queue:
+  type: redis
+workers:
+  type: python-worker
+  config:
+    python_version: v2.7
+  environment:
+    DJANGO_SETTINGS_MODULE: settings.production
+python:
+  type: python
+  config:
+    python_version: v2.7
+    enable_newrelic: true
+  environment:
+    DJANGO_SETTINGS_MODULE: settings.production
+    NEW_RELIC_LICENSE_KEY: ea61f0b6eee79addfe8122109fea6fd66f9c1dbf
+    NEW_RELIC_APP_NAME: We Have, We Need
+    NEW_RELIC_LOG: /var/log/supervisor/newrelic.log
+    NEW_RELIC_LOG_LEVEL: info
+  systempackages:
+     - libpcre3-dev
+     - python3-all
+     - ruby
+     - rubygems
+     - yui-compressor
+  prebuild: ./prebuild.sh
+  postbuild: ./postbuild.sh
+

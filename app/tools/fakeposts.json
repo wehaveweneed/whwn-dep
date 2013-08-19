@@ -1,0 +1,8 @@
+{
+    "items": [
+        { "name":"Item Title 1" , "description":"Content 1", "is_needed":true },
+        { "name":"Item Title 2" , "description":"Content 2", "is_needed":true },
+        { "name":"Item Title 3" , "description":"Content 3", "is_needed":false },
+        { "name":"Item Title 4" , "description":"Content 4", "is_needed":false }
+    ]
+}
