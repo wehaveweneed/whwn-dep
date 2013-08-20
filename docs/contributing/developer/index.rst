@@ -24,7 +24,7 @@ would be happy to help you.
 
 __ http://www.hipchat.com/gnTbwuYut
 
-If nobody is in the chat room, tweet @wehaveweneed__ and we'll get
+If nobody is in the chat room, tweet__ @wehaveweneed and we'll get
 in there. If you'd prefer to send us an email, you can reach us at
 support@wehave-weneed.org
 
