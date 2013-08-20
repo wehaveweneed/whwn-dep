@@ -6,7 +6,7 @@
     <div id="header-content">
     {% endif %}
         <div id="header-logo">
-            <div id="logo-container"><img id="whwn-cube-arrow-logo" src="//s3.amazonaws.com/whwnhaiti/whwn.png" width=24px height=24px /></div>
+            <div id="logo-container"><img id="whwn-cube-arrow-logo" src="{{S3HOST}}whwn.png" width=24px height=24px /></div>
             <div id="logo-text-container"><a href="{% url home %}">we<span class="logo-have">have</span>we<span class="logo-need">need</span></a></div>
         </div>
         {% if user.is_anonymous %}
