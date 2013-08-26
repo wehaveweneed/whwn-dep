@@ -4,7 +4,8 @@ python:
 env:
   -  DJANGO_SETTINGS_MODULE=settings.development
 before_script:
-  - psql -c 'create database whwn_test;' -U whwn
+  - psql -c 'create database whwn;' -U postgres
+  - createuser whwn
 
 install: 
   -  "pip install -r requirements.txt --use-mirrors"
