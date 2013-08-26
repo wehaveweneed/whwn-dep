@@ -4,15 +4,14 @@ python:
 env:
   -  DJANGO_SETTINGS_MODULE=settings.development
 before_script:
-  - psql -c 'create database whwn_test;' -Uwhwn
-  - createuser whwn
+  - psql -c 'create database whwn_test;' -U whwn
 
 install: 
   -  "pip install -r requirements.txt --use-mirrors
   -  yes | sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
   -  sudo apt-get update
   -  sudo apt-get install libgeos-dev libproj-dev 
-  
+
 services:
   - elasticsearch
 
