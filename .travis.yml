@@ -1,26 +1,19 @@
-language: 
-    - python
-python:
-    - "2.7"
+language: python
+python: 
+  - "2.7"
+env:
+  -  DJANGO_SETTINGS_MODULE=settings.development
+before_script:
+  - psql -c 'create database whwn_test;' -Uwhwn
+  - createuser whwn
 
-before_install:
-    - sudo apt-get install python-software-properties -y
-    - echo "yes" | sudo apt-add-repository ppa:ubuntugis/ppa
-    - sudo apt-get update -y
-    - sudo apt-get install geos -y
-    - sudo apt-get install openjdk-7-jre-headless -y
-    - wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-0.90.0.deb
-    - sudo dpkg -i elasticsearch-0.90.0.deb
-    - sudo service elasticsearch start
-    - sudo gem install bundler --no-ri --no-rdoc
-    - createuser -d -s whwn
-    - createdb -Uwhwn -E utf8 whwn
+install: 
+  -  "pip install -r requirements.txt --use-mirrors
+  -  yes | sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
+  -  sudo apt-get update
+  -  sudo apt-get install libgeos-dev libproj-dev 
+  
+services:
+  - elasticsearch
 
-install:
-    - export DJANGO_SETTINGS_MODULE=settings.development
-    - bundle install
-    - pip install -r requirements.txt
-
-script:
-    - python app/manage.py test
-      
+script: nosetests
