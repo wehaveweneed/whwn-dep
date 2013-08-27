@@ -18,6 +18,7 @@ src/
 htmlcov/
 .coverage
 app/tmp/
+docs/_build/
 
 keys.json
 .cache/
