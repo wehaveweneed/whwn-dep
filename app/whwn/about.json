@@ -1,0 +1,6 @@
+{
+    "team": [
+        {"name": "Jon", "description": "team leader", "link": "www.picture.com"}, 
+        {"name": "Kiley", "description": "coder", "link": "www.picture.com"} 
+    ]
+}
